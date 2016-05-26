@@ -1,6 +1,6 @@
-# Unknown Game
+# Lost Goblin Website
 
-A game rendered with react.
+A website rendered with react.
 
 ### Install npm dependencies
 
