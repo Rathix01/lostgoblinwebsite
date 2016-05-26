@@ -1,0 +1,41 @@
+.video
+	position relative
+	padding-top 80px
+	text-align center
+
+	img
+		margin 0px auto;
+
+	.video-iframe
+		width 1168px
+		height 650px
+		margin 30px auto 0px
+		border none
+		outline none
+
+	.video-play-button
+		position absolute
+		top 80px
+		width 1168px
+		height 660px
+		cursor pointer
+		left 50%
+		margin-left -584px
+
+		&:before
+			content " "
+			height 60px
+			width 100px
+			background #3D7627 url(images/play-button.png) no-repeat center center
+			position absolute
+			top 330px
+			left 50%
+			margin-left -50px
+			border-radius 10px
+
+
+		&:hover
+			opacity 1
+
+			&:before
+				background #598526 url(images/play-button.png) no-repeat center center
