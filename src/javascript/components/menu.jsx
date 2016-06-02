@@ -22,7 +22,9 @@ module.exports = React.createClass({
               <ButtonInput id="OurStory"  className={ MenuStyles.option }>Our Story</ButtonInput>
               <ButtonInput id="ContactUs" className={ MenuStyles.option }>Contact Us</ButtonInput>
             </div>
-            <SocialMediaButtons /> 
+            <div className={ MenuStyles.socialMediaButtonContainer }>
+              <SocialMediaButtons />
+            </div>
           </div>
       </div>
     )

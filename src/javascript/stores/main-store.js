@@ -18,6 +18,7 @@ const HomePageScrollStore = require('./home-page-scroll-store')
 const StickyMenuStore = require('./sticky-menu-store');
 const ContactUsStore = require('./contact-us-store');
 const BlogListStore = require('./blog-list-store');
+const HamburgerMenuStore = require('./hamburger-menu-store');
 
 //const DevblogTimelineStore = require('./devblog-timeline-store');
 //const GamesTimelineStore = require('./games-timeline-store');

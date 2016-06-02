@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
 		margin: "0px auto",
 		maxWidth: "1200px",
 		fontFamily: '"Architects Daughter"',
+		textIndent: "10px",
 	},
 	contactUs: {
 		margin: "0px auto",

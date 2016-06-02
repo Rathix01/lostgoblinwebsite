@@ -5,6 +5,7 @@ const MenuStyles = require('../styles/menu-styles');
 const ButtonInput = require('./button-input');
 const SocialMediaButtons = require('./social-media-buttons')
 const AnimationContainer = require('./animation-container')
+const HamburgerMenuButton = require('./hamburger-menu-button')
 
 module.exports = React.createClass({
   
@@ -24,7 +25,10 @@ module.exports = React.createClass({
               <ButtonInput id="OurStory"  className={ MenuStyles.option }>Our Story</ButtonInput>
               <ButtonInput id="ContactUs" className={ MenuStyles.option }>Contact Us</ButtonInput>
             </div>
-            <SocialMediaButtons /> 
+            <div className={ MenuStyles.socialMediaButtonContainer }>
+              <SocialMediaButtons /> 
+            </div>
+            <HamburgerMenuButton id="StickyMenuHamburgerButton" />
           </div>
       </AnimationContainer>
     )

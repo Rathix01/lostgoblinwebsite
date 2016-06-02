@@ -33,11 +33,30 @@ const styles = StyleSheet.create({
 		top: "10px",
 		height: "90px",
 		width: "488px",
+
+		'@media (max-width: 1200px)': {
+            display: "none"
+        }
 	},
 	socialMediaButtonPosition: {
 		position: "absolute",
 		right: "50px",
 		top: "-5px",
+
+		'@media (max-width: 1200px)': {
+            display: "none"
+        }
+	},
+	fixedFooter: {
+		position: "fixed",
+		bottom: "0px",
+		display: "none",
+		width: "90%",
+		height: "80px",
+
+		'@media (max-width: 1200px)': {
+            display: "block"
+        }
 	}
 })
 
@@ -46,5 +65,6 @@ module.exports = {
 	footerContent: css( styles.footerContent ),
 	disclaimer: css( styles.disclaimer ),
 	socialMediaButtonBackground: css( styles.socialMediaButtonBackground ),
-	socialMediaButtonPosition: css( styles.socialMediaButtonPosition )
+	socialMediaButtonPosition: css( styles.socialMediaButtonPosition ),
+	fixedFooter: css( styles.fixedFooter )
 }

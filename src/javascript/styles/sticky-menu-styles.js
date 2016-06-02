@@ -20,9 +20,13 @@ const styles = StyleSheet.create({
 	        height: "20px",
 	        width: "100%",
 	        position: "absolute",
-	        top: "0px",
+	        top: "-1px",
 	        left: "0px"
-	    }
+	    },
+
+	    '@media (max-width: 1200px)': {
+            backgroundPosition: "left 15px"
+        }
 	},
 	main: {
 		boxSizing: "border-box",
@@ -38,6 +42,20 @@ const styles = StyleSheet.create({
 		width: "500px",
 		height: "55px",
 		marginLeft: "260px",
+
+		'@media (max-width: 1200px)': {
+            position: "absolute",
+            right: "150px"
+        },
+
+        '@media (max-width: 1000px)': {
+            position: "absolute",
+            right: "20px"
+        },
+
+        '@media (max-width: 850px)': {
+            display: "none"
+        }
 	},
 })
 

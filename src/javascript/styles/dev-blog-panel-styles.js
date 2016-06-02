@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 		margin: "0px auto",
 		maxWidth: "1200px",
 		fontFamily: '"Architects Daughter"',
+		textIndent: "10px",
 	},
 	hero: {
 		maxWidth: "1200px",
@@ -35,6 +36,10 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		margin: "0px auto",
 		maxWidth: "1200px",
+
+		'@media (max-width: 1200px)': {
+            flexDirection: "column",
+        }
 	},
 	hero2: {
 		background: "#AFA294 url(images/no-image.png) no-repeat center center",
@@ -53,10 +58,20 @@ const styles = StyleSheet.create({
 	heroImage: {
 		width: "100%",
 		height: "100%",
+
+		'@media (max-width: 1200px)': {
+            width: "100%",
+            height: "100%"
+        }
 	},
 	subHeroImage: {
 		width: "600px",
 		height: "447px",
+
+		'@media (max-width: 1200px)': {
+            width: "100%",
+            height: "100%"
+        }
 	},
 	latestPostFeatureTile: {
 		background: "url(images/hero-tile-text-background.png)",
@@ -119,5 +134,4 @@ module.exports = {
 	subTitle: css( styles.subTitle ),
 	heroImage: css( styles.heroImage ),
 	subHeroImage: css( styles.subHeroImage ),
-
 }

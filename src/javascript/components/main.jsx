@@ -6,8 +6,9 @@ const StickyMenu = require('./sticky-menu');
 const HomePage = require('./home-page')
 const ArticlePage = require('./article-page');
 const Footer = require('./footer');
-
+const FixedFooter = require('./fixed-footer')
 const MainStyles = require('../styles/main-styles')
+const MobileMenu = require('./mobile-menu')
 
 module.exports = React.createClass({
   
@@ -25,6 +26,8 @@ module.exports = React.createClass({
         <HomePage />
         <StickyMenu id='StickyMenu' />
         <Footer />
+        <FixedFooter id='FixedFooter' />
+        <MobileMenu id='MobileMenu' />
       </main>
     )
   }

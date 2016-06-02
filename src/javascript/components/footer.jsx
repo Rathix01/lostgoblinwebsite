@@ -25,7 +25,7 @@ module.exports = React.createClass({
         <div className={ FooterStyles.footerContent }>
           <div className={ FooterStyles.socialMediaButtonBackground }>
             <div className={ FooterStyles.socialMediaButtonPosition }>
-            <SocialMediaButtons id="FooterSocialMediaButtons" />
+              <SocialMediaButtons id="FooterSocialMediaButtons" />
             </div>
           </div>
           <div className={ FooterStyles.disclaimer }>

@@ -79,6 +79,11 @@ const styles = StyleSheet.create({
 			filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))"
 		}
 	},
+	socialMediaButtonContainer: {
+		'@media (max-width: 1200px)': {
+            display: "none"
+        }
+	},
 	socialMediaButtons: {
 		position: "absolute",
 		right: "-48px",
@@ -90,6 +95,8 @@ const styles = StyleSheet.create({
 		padding: "8px 15px 0px",
 		boxSizing: "border-box",
 		background: "url(images/social-media-background.png) no-repeat center 0px",
+
+
 	},
 	socialMediaButton: {
 		width: "55px",
@@ -133,6 +140,7 @@ module.exports = {
 	main: css( styles.main ),
 	menuOptions: css( styles.menuOptions ),
 	option: css( styles.option ),
+	socialMediaButtonContainer: css( styles.socialMediaButtonContainer ),
 	socialMediaButtons: css( styles.socialMediaButtons ),
 	twitterButton: css( styles.twitterButton, styles.socialMediaButton ),
 	facebookButton: css( styles.facebookButton, styles.socialMediaButton ),
