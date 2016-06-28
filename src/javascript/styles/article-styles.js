@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
 		boxSizing: "border-box",
 		minHeight: '400px',
 		paddingTop: "60px",
+		background: "#3F3432",
 
 		':before': {
 	        content: '" "',

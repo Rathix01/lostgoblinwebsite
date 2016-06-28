@@ -28,6 +28,10 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		margin: "0px auto",
 		maxWidth: "1200px",
+
+		'@media (max-width: 900px)': {
+            flexDirection: "column",
+        }
 	},
 	ourStoryLogo: {
 		flexGrow: "1",
@@ -44,6 +48,12 @@ const styles = StyleSheet.create({
 		background: "#FFC40F",
 		padding: "20px",
 		boxSizing: "border-box",
+		maxWidth: "60%",
+		fontFamily: '"Roboto"',
+
+		'@media (max-width: 900px)': {
+            maxWidth: "none",
+        }
 	}
 })
 

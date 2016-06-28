@@ -34,7 +34,19 @@ const styles = StyleSheet.create({
 		display: "flex",
 		flexDirection: "row",
 		width: "740px",
-		height: "55px"
+		height: "55px",
+
+		'@media (max-width: 1200px)': {
+            margin: "0px auto"
+        },
+
+        '@media (max-width: 850px)': {
+            width: "600px"
+        },
+
+        '@media (max-width: 620px)': {
+            width: "100%",
+        }
 	},
 	option: {
 		flexGrow: "1",
@@ -77,7 +89,12 @@ const styles = StyleSheet.create({
 			background: "url(images/menu-hover-background.png) no-repeat center 8px",
 			transform: "translateY(0px)",
 			filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))"
-		}
+		},
+
+		'@media (max-width: 620px)': {
+            fontSize: "18px",
+            lineHeight: "15px",
+        }
 	},
 	socialMediaButtonContainer: {
 		'@media (max-width: 1200px)': {
@@ -96,7 +113,12 @@ const styles = StyleSheet.create({
 		boxSizing: "border-box",
 		background: "url(images/social-media-background.png) no-repeat center 0px",
 
-
+		'@media (max-width: 550px)': {
+            right: "none",
+            left: "-10px",
+            width: "100%",
+            backgroundSize: "100% 100%"
+        },
 	},
 	socialMediaButton: {
 		width: "55px",
@@ -116,7 +138,9 @@ const styles = StyleSheet.create({
 		":active": {
 			transform: "translateY(1px)",
 			filter: "drop-shadow(0px 0px 0px rgba(0,0,0,0))"
-		}
+		},
+
+		
 	},
 	twitterButton: {
 		background: "url(images/twitter-menu-button.png) no-repeat center center",

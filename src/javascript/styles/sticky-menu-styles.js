@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
 		boxSizing: "border-box",
 		height: '100px',
 		background: "url(images/sticky-menu-background.png) no-repeat center 15px",
-		zIndex: "1",
+		zIndex: "5",
 		marginTop: "-5px",
 		position: "fixed",
 		top: "0px",
@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
 
 	    '@media (max-width: 1200px)': {
             backgroundPosition: "left 15px"
+        },
+
+        '@media (max-width: 400px)': {
+            background: "url(images/sticky-menu-background-small-screen.png) no-repeat -20px 15px",
         }
 	},
 	main: {

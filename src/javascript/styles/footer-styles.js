@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 		zIndex: "2",
 		background: "url(images/footer-background.png) repeat-x bottom left",
 		marginTop: "50px",
-		fontFamily: "Arial",
+		fontFamily: '"Roboto"',
 
 		':before': {
 	        content: '" "',
@@ -56,6 +56,10 @@ const styles = StyleSheet.create({
 
 		'@media (max-width: 1200px)': {
             display: "block"
+        },
+
+        '@media (max-width: 550px)': {
+        	width: "105%",
         }
 	}
 })

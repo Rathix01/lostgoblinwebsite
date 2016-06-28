@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
 	container: {
 		width: '100%',
 		boxSizing: "border-box",
-		minHeight: '400px',
 		paddingTop: "60px",
 
 		':before': {
@@ -27,12 +26,33 @@ const styles = StyleSheet.create({
 		margin: "0px auto",
 		maxWidth: "1200px",
 		display: "flex",
-		flexDirection: "column"
+		flexDirection: "column",
+		position: "relative",
 	},
 	image: {
 		flexGrow: "1",
-		cursor: "pointer"
-	}
+		width: "100%",
+	},
+	appStore: {
+		background: "url(images/app-store.png) no-repeat center bottom",
+		backgroundSize: "100% 100%",
+		position: "absolute",
+		bottom: "8px",
+		right: "8px",
+		width: "125px",
+		height: "38px",
+		cursor: "pointer",
+	},
+	playStore: {
+		background: "url(images/play-store.png) no-repeat center bottom",
+		backgroundSize: "100% 100%",
+		position: "absolute",
+		bottom: "8px",
+		right: "135px",
+		width: "125px",
+		height: "38px",
+		cursor: "pointer",
+	},
 })
 
 module.exports = {
@@ -40,4 +60,6 @@ module.exports = {
 	header: css( styles.header ),
 	games: css( styles.games ),
 	image: css( styles.image ),
+	appStore: css( styles.appStore ),
+	playStore: css( styles.playStore ),
 }

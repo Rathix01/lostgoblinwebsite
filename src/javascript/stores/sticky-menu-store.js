@@ -23,4 +23,4 @@ const toTweens = ( scroll ) => ({
 });
 
 const menuPositionChanges = WindowScrollPositionStore.scrollPosition.scan( { display: false }, toDisplay ).filter( toChanges )
-menuPositionChanges.map( toTweens ).onValue( AnimationStore.toTimeline )
+menuPositionChanges.changes().map( toTweens ).onValue( AnimationStore.toTimeline )

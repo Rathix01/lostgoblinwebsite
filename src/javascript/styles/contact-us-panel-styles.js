@@ -38,6 +38,10 @@ const styles = StyleSheet.create({
 		cursor: "pointer",
 		display: "flex",
 		flexDirection: "row",
+
+		'@media (max-width: 900px)': {
+            flexDirection: "column",
+        }
 	},
 	yourMessage: {
 		flexGrow: "1",
@@ -65,7 +69,7 @@ const styles = StyleSheet.create({
 		padding: "15px",
 		fontSize: "16px",
 		width: "100%",
-		fontFamily: "Arial",
+		fontFamily: '"Roboto"',
 		minHeight: "200px"
 	},
 	sendMessageButton: {
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
 		marginLeft: "3px",
 		marginRight: "6px",
 		padding: "10px",
-		fontFamily: "Arial",
+		fontFamily: '"Roboto"',
 		fontSize: "12px",
 		width: "60%",
 		position: "absolute",

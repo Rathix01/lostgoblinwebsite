@@ -10,6 +10,7 @@ module.exports = React.createClass({
     return (
         <div className={ ArticleStyles.container }>
           <h1 className={ ArticleStyles.header }>This is just a test</h1>
+          { this.props.id }
         </div>
     )
   }

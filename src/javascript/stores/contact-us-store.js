@@ -24,6 +24,33 @@ const toDisplayTweens = ( scroll ) => ({
 });
 
 const toHideState = ( scroll ) => ({ y: 500, opacity: 0 })
+const postEmail = ( data ) => {
+
+	var data = {
+		_subject: "Lost Goblin Website - Contact Us",
+		email: data.email.value,
+		name: data.name.value,
+		message: data.message.value
+	};
+
+	var xmlhttp = new XMLHttpRequest();
+  	xmlhttp.onreadystatechange = function(){
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+      try {
+        var response = expectJsonResult
+          ? JSON.parse(xmlhttp.responseText)
+          : xmlhttp.responseText;
+        d.resolve(response);
+      } catch( exception ) {
+        d.reject( 'could not parse: '+ xmlhttp.responseText);
+      }
+    }
+  }
+  xmlhttp.open( "POST", "https://formspree.io/support@lostgoblin.com" , true );
+  xmlhttp.setRequestHeader("Content-Type", "application/json");
+  xmlhttp.send(JSON.stringify( data ));
+
+}
 
 const name = ContactUsActions.actions.Name.map( includeValid ).toProperty({ valid: false });
 const email = ContactUsActions.actions.Email.map( includeValid ).toProperty({ valid: false });
@@ -41,6 +68,8 @@ validMessageTemplate
 	.merge( messageFieldsTemplate.toEventStream() )
 	.map( toHideErrorMessage )
 	.onValue( StateStore.publish("ErrorMessage") )
+
+validMessageTemplate.onValue( postEmail )
 
 Bacon.once({}).map( toHideState ).onValue( StateStore.publish("ThankyouAnimation") );
 validMessageTemplate.map( toDisplayTweens ).onValue( AnimationStore.toTimeline );

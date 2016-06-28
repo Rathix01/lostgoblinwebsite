@@ -7,41 +7,52 @@ const styles = StyleSheet.create({
 		width: '100%',
 		boxSizing: "border-box",
 		minHeight: "300px",
-		paddingTop: "60px",
+		paddingTop: "10px",
 
 		':before': {
 	        content: '" "',
 	    }
 	},
 	list: {
-		border: "solid 1px red",
 		margin: "0px auto",
 		maxWidth: "1200px",
 	},
 	itemContainer: {
 		opacity: "1",
-		border: "solid 1px #fff"
+		display: 'flex',
+		flexDirection: 'row',
+		marginBottom: "10px",
+		cursor: "pointer"
+	},
+	thumb: {
+		height: "180px",
+		width: "300px",
+		marginRight: "30px",
+		display: "flex",
+		justifyContent: "center",
+		overflow: "hidden"
+	},
+	thumbImg: {
+		height: "100%",
+	},
+	title: {
+		margin: "0px 0px 10px 5px",
+		fontSize: "28px",
+		color: "#F68F21",
+		fontFamily: "Architects Daughter"
+	},
+	subtext: {
+		color: "#FFF",
+		fontFamily: "Roboto"
 	}
-
-	// header: {
-	// 	background: "url(images/dev-blog-line.png) no-repeat center bottom",
-	// 	width: "100%",
-	// 	color: "#F68F21",
-	// 	height: "70px",
-	// 	margin: "0px auto",
-	// 	maxWidth: "1200px",
-	// 	fontFamily: '"Architects Daughter"',
-	// },
-	// content: {
-	// 	display: "flex",
-	// 	flexDirection: "row",
-	// 	margin: "0px auto",
-	// 	maxWidth: "1200px",
-	// },
 })
 
 module.exports = {
 	container: css( styles.container ),
 	list: css( styles.list ),
-	itemContainer: css( styles.itemContainer )
+	itemContainer: css( styles.itemContainer ),
+	thumb: css( styles.thumb ),
+	title: css( styles.title ),
+	subtext: css( styles.subtext ),
+	thumbImg: css( styles.thumbImg )
 }

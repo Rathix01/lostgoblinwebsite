@@ -20,6 +20,8 @@ const ContactUsStore = require('./contact-us-store');
 const BlogListStore = require('./blog-list-store');
 const HamburgerMenuStore = require('./hamburger-menu-store');
 
-//const DevblogTimelineStore = require('./devblog-timeline-store');
-//const GamesTimelineStore = require('./games-timeline-store');
-//const PageTimelineStore = require('./page-timeline-store');
+const RouteStore = require('./route-store');
+const DevBlogPanelAnimationStore = require('./dev-blog-panel-animation-store');
+const DevBlogListAnimationStore = require('./dev-blog-list-animation-store');
+const DevBlogItemAnimationStore = require('./dev-blog-item-animation-store');
+const BackButtonStore = require('./back-button-store');

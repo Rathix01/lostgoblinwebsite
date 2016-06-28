@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 		right: "15px",
 		cursor: 'pointer',
 
-		'@media (min-width: 850px)': {
+		'@media (min-width: 851px)': {
             display: "none"
         }
 	},

@@ -1,6 +1,7 @@
 const React = require('react');
 const ComponentBase = require('../mixins/component-base');
 const DevBlogPanelStyles = require('../styles/dev-blog-panel-styles');
+const AnimationContainer = require('./animation-container');
 
 module.exports = React.createClass({
   
@@ -10,17 +11,10 @@ module.exports = React.createClass({
     return {};
   },
 
-  getClassNameFromProps() {
-    return this.props.className ? this.props.className : DevBlogPanelStyles.item
-  },
-
   render() {
     return (
-      <div className={ this.getClassNameFromProps() }>
+      <div className={ DevBlogPanelStyles.subImageContainer }>
         <img src={ "../content/images/" + this.state.img } className={ DevBlogPanelStyles.subHeroImage } />
-        <div className={ DevBlogPanelStyles.subTitle }>
-          { this.state.title }
-        </div>
       </div>
     )
   }

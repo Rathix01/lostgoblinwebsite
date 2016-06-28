@@ -3,7 +3,10 @@ var ActionManager = require( './action-manager' );
 
 var actions = {
   BlogItem: new Bacon.Bus(),
-  BlogItemSelect: new Bacon.Bus()
+  BlogItemSelect: new Bacon.Bus(),
+  ShowBlogList: new Bacon.Bus(),
+  BackToHomeBackButton: new Bacon.Bus(),
+  BackToListBackButton: new Bacon.Bus(),
 }
 
 ActionManager.register( actions );

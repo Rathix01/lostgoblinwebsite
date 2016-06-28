@@ -17,15 +17,17 @@ module.exports = React.createClass({
   render() {
     return (
       <AnimationContainer id='MobileMenuAnimation' className={ MobileMenuStyles.container }>
-        <div className={ MenuStyles.container }>
-            <div className={ MenuStyles.main }>
-              <div className={ MenuStyles.menuOptions }>
-                <ButtonInput id="DevBlog"   className={ MenuStyles.option }>Devblog</ButtonInput>
-                <ButtonInput id="Games"     className={ MenuStyles.option }>Games</ButtonInput>
-                <ButtonInput id="OurStory"  className={ MenuStyles.option }>Our Story</ButtonInput>
-                <ButtonInput id="ContactUs" className={ MenuStyles.option }>Contact Us</ButtonInput>
+        <div>
+            <div className={ MobileMenuStyles.menuAreas }>
+              <div className={ MobileMenuStyles.menuOptions }>
+                <ButtonInput id="DevBlog"   className={ MenuStyles.option + " " + MobileMenuStyles.option }>Devblog</ButtonInput>
+                <ButtonInput id="Games"     className={ MenuStyles.option + " " + MobileMenuStyles.option }>Games</ButtonInput>
+                <ButtonInput id="OurStory"  className={ MenuStyles.option + " " + MobileMenuStyles.option }>Our Story</ButtonInput>
+                <ButtonInput id="ContactUs" className={ MenuStyles.option + " " + MobileMenuStyles.option }>Contact Us</ButtonInput>
               </div>
-              <SocialMediaButtons />
+              <div className={ MobileMenuStyles.socialMediaArea }>
+                <SocialMediaButtons />
+              </div>
             </div>
         </div>
       </AnimationContainer>

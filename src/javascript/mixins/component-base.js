@@ -64,7 +64,13 @@ var componentBase = {
 
     publishState: function() {
         Actions.actionBus.push( R.merge( this.state, { actionKey: this.props.id } ) );
-    }
+    },
+
+    publishToAction(actionKey, event) {
+        if (actionKey) {
+            Actions.actionBus.push( R.merge( event, { actionKey } ) );
+        }
+    },
 }
 
 module.exports = componentBase;

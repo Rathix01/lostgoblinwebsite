@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
 		minHeight: '800px',
 		paddingTop: "60px",
 
+
 		':before': {
 	        content: '" "',
 	    }
@@ -22,14 +23,16 @@ const styles = StyleSheet.create({
 		maxWidth: "1200px",
 		fontFamily: '"Architects Daughter"',
 		textIndent: "10px",
+		position: "relative",
 	},
 	hero: {
 		maxWidth: "1200px",
 		position: "relative",
-		background: "#BCB1A5 url(images/no-image.png) no-repeat center center",
-		minHeight: "730px",
+		background: "#BCB1A5",
 		margin: "0px auto",
 		cursor: "pointer",
+		textAlign: "center",
+		opacity: "1",
 	},
 	twoMore: {
 		display: "flex",
@@ -37,59 +40,77 @@ const styles = StyleSheet.create({
 		margin: "0px auto",
 		maxWidth: "1200px",
 
-		'@media (max-width: 1200px)': {
+		'@media (max-width: 800px)': {
             flexDirection: "column",
         }
 	},
 	hero2: {
-		background: "#AFA294 url(images/no-image.png) no-repeat center center",
-		minHeight: "357px",
+		maxWidth: "50%",
 		flexGrow: "1",
 		position: "relative",
 		cursor: "pointer",
+		overflow: "hidden",
+		background: "#9F9284",
+
+		'@media (max-width: 800px)': {
+            maxWidth: "100%",
+            maxHeight: "none",
+        }
 	},
 	hero3: {
-		background: "#9F9284 url(images/no-image.png) no-repeat center center",
-		minHeight: "357px",
+		maxWidth: "50%",
 		flexGrow: "1",
 		position: "relative",
 		cursor: "pointer",
+		overflow: "hidden",
+		background: "#303030",
+
+		'@media (max-width: 800px)': {
+            maxWidth: "100%",
+            maxHeight: "none",
+        }
 	},
 	heroImage: {
-		width: "100%",
+		maxWidth: "100%",
+		height: "auto",
+		margin: "0px auto"
+	},
+	subImageContainer: {
 		height: "100%",
-
-		'@media (max-width: 1200px)': {
-            width: "100%",
-            height: "100%"
-        }
+		width: "100%",
+		display: 'flex',
+		flexDirection: "column",
+		justifyContent: "center",
 	},
 	subHeroImage: {
-		width: "600px",
-		height: "447px",
-
-		'@media (max-width: 1200px)': {
-            width: "100%",
-            height: "100%"
-        }
+		maxWidth: "100%",
+		maxHeight: "100%",
 	},
 	latestPostFeatureTile: {
 		background: "url(images/hero-tile-text-background.png)",
 		position: "absolute",
 		bottom: "70px",
-		width: "643px",
+		left: "0px",
+		maxWidth: "643px",
+		width: "100%",
 		height: "182px",
 		color: "#fff",
 		padding: "40px",
 		boxSizing: "border-box",
 		marginLeft: "-1px",
-		fontFamily: "Arial",
+		fontFamily: '"Roboto"',
+
+		'@media (max-width: 800px)': {
+            height: "100px",
+            bottom: "0px",
+            padding: "10px"
+        }
 	},
 	latestPostTitle: {
 		margin: "0px 0px 10px 0px"
 	},
 	seeMorePostsButton: {
-		margin: "0px auto",
+		margin: "-5px auto 0px",
 		maxWidth: "1200px",
 		background: "#F68F21",
 		color: "#fff", 
@@ -117,7 +138,7 @@ const styles = StyleSheet.create({
 		fontSize: "24px",
 		boxSizing: "border-box",
 		padding: "20px",
-		fontFamily: "Arial"
+		fontFamily: '"Roboto"',
 	}
 })
 
@@ -133,5 +154,6 @@ module.exports = {
 	seeMorePostsButton: css( styles.seeMorePostsButton ),
 	subTitle: css( styles.subTitle ),
 	heroImage: css( styles.heroImage ),
+	subImageContainer: css( styles.subImageContainer ),
 	subHeroImage: css( styles.subHeroImage ),
 }
