@@ -10,14 +10,13 @@ const publishHeroItem = ( state ) => StateStore.publish( "Hero" + state.hero, st
 const wrap = ( item ) => [item];
 
 const blogListItems = BlogListActions.actions.BlogItem.map(toProps)
-const allBlogItems = BlogListActions.actions.BlogItem.map( wrap ).scan([], R.concat).changes();
+const allBlogItems = blogListItems.map( wrap ).scan([], R.concat).changes().debounce(100);
 
 const heroItems = blogListItems.filter(isHero)
 const otherItems = blogListItems.filter(isNotHero)
 
 heroItems.onValue( publishHeroItem );
-allBlogItems.debounce(100)
 
 module.exports = {
-	blogListItems
+	blogListItems, allBlogItems
 }

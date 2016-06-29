@@ -3,6 +3,7 @@ const ComponentBase = require('../mixins/component-base');
 const AnimationContainer = require('./animation-container');
 const VisibilityToggle = require('./visibility-toggle');
 const BackButton = require('./back-button');
+const Styles = require('../styles/article-styles');
 
 const getArticleFromState = ( Component, state ) => {
   return React.createClass({
@@ -10,7 +11,6 @@ const getArticleFromState = ( Component, state ) => {
       mixins: [ComponentBase],
 
       render: function() {
-        console.log('does this bit happen>?')
         return ( <div><Component /></div> );
       }    
   });
@@ -25,10 +25,9 @@ module.exports = React.createClass({
   },
 
   getArticle() {
-    console.log( "Component...", this.state.component )
     if( this.state.component !== undefined ) {
       const Article = getArticleFromState( this.state.component, this.state );
-      return <Article id='ArticleFoo' />
+      return <Article id='Article' />
     } else {
       return <div></div>
     }
@@ -37,11 +36,11 @@ module.exports = React.createClass({
   render() {
     return (
       <VisibilityToggle id='DevBlogArticleVisibility'>
-        <AnimationContainer id="DevBlogArticleAnimation" className='dev-blog-article-animation'>
-          { this.getArticle() }
-          <div >
+        <AnimationContainer id="DevBlogArticleAnimation" className={ Styles.pageContainer }>
+          <div className={ Styles.backToList }>
             <BackButton id="BackToList" />
           </div>
+          { this.getArticle() }
         </AnimationContainer>
       </VisibilityToggle>
     )

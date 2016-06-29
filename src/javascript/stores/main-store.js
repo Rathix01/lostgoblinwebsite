@@ -21,7 +21,7 @@ const BlogListStore = require('./blog-list-store');
 const HamburgerMenuStore = require('./hamburger-menu-store');
 
 const RouteStore = require('./route-store');
+const HistoryStore = require('./history-store');
 const DevBlogPanelAnimationStore = require('./dev-blog-panel-animation-store');
 const DevBlogListAnimationStore = require('./dev-blog-list-animation-store');
 const DevBlogItemAnimationStore = require('./dev-blog-item-animation-store');
-const BackButtonStore = require('./back-button-store');

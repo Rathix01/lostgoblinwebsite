@@ -30,26 +30,33 @@ const toHeroDepartTweens = () => ({
 });
 
 const isHomePage = ( state ) => state.location === "home";
+const wasOnHomePage = ( state ) => state.prev === "home";
 const toVisible = R.curry( ( isVisible, state ) => ( { display: isVisible } ) )
 
-const showBlogList = BlogListActions.actions.ShowBlogList.debounce(600);
-const heroDepartAnimation = showBlogList.map( toHeroDepartTweens ).flatMap( AnimationStore.toTimeline );
-
+// arrive
 const homePageRoute = RouteStore.location.filter( isHomePage );
 const backToHerosClick = BlogListActions.actions.BackToHomeBackButton.debounce( 600 );
-
 const arrivals = homePageRoute.merge( backToHerosClick );
 const heroArriveAnimations = arrivals.map( toHeroArriveTweens ).flatMap( AnimationStore.toTimeline );
+
+//depart
+const showBlogList = BlogListActions.actions.ShowBlogList.debounce(600);
+const heroItemSelect = BlogListActions.actions.HeroItemSelect;
+const heroDepartAnimation = showBlogList.map( toHeroDepartTweens ).flatMap( AnimationStore.toTimeline );
+const heroSelectAnimation = heroItemSelect.map( toHeroDepartTweens ).flatMap( AnimationStore.toTimeline );
 
 // these no-ops kick off the above animations.
 heroArriveAnimations.onValue(() => {});
 heroDepartAnimation.onValue(() => {});
+heroSelectAnimation.onValue(() => {});
 
-arrivals.map( toVisible( true ) )
-			 .merge( heroDepartAnimation.map( toVisible( false ) ) )
+arrivals.merge(heroArriveAnimations)
+			 .map( toVisible( true ) )
+			 .merge( heroDepartAnimation.merge(heroSelectAnimation).map( toVisible( false ) ) )
 			 .onValue( StateStore.publish( "DevBlogPanelVisibility" ) );
 
 module.exports = {
 	heroArriveAnimations, 
-	heroDepartAnimation
+	heroDepartAnimation,
+	heroSelectAnimation
 }

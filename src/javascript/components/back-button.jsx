@@ -14,8 +14,8 @@ module.exports = React.createClass({
 
   render() {
     return (
-      <VisibilityToggle id='DevPanelBackButtonVisibility'>
-        <AnimationContainer id="DevPanelBackButtonAnimation"  className={ BackButtonStyles.container }>
+      <VisibilityToggle id={ this.props.id + 'Visibility' }>
+        <AnimationContainer id={ this.props.id + 'Animation' } className={ BackButtonStyles.container }>
           <div className={ BackButtonStyles.clickArea } onClick={ this.handleClick }></div>
         </AnimationContainer>
       </VisibilityToggle>

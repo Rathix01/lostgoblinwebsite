@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		top: "5px",
 		right: "5px",
+		cursor: "pointer",
 
 		":hover": {
 			marginTop: "-1px",

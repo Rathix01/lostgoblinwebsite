@@ -9,7 +9,8 @@ module.exports = React.createClass({
   render() {
     return (
         <div className={ ArticleStyles.container }>
-          <h1 className={ ArticleStyles.header }>This is just a test</h1>
+          <h1 className={ ArticleStyles.header }>This is just another test</h1>
+          <div className={ ArticleStyles.textContainer }> It looks different... </div>
         </div>
     )
   }

@@ -13,8 +13,9 @@ const toY = ( template ) => ( ( template.scroll.position + template.change.y ) -
 
 const el = ScrollElementStore.scrollElement;
 const toTopOfDevBlog = BlogListActions.actions.ShowBlogList.map( { actionKey: "DevBlog" } );
+const toTopOfHeros = BlogListActions.actions.HeroItemSelect.map( { actionKey: "DevBlog" } );
 
-const positionUpdates = MenuOptionStore.menuUpdates.merge( toTopOfDevBlog );
+const positionUpdates = MenuOptionStore.menuUpdates.merge( toTopOfDevBlog ).merge( toTopOfHeros );
 
 const positionChange = positionUpdates.map( toPosition );
 const position = WindowScrollPositionStore.scrollPosition

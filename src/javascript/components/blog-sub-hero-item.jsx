@@ -11,9 +11,13 @@ module.exports = React.createClass({
     return {};
   },
 
+  handleClick() {
+    this.publishToAction( "HeroItemSelect", this.state )
+  },
+
   render() {
     return (
-      <div className={ DevBlogPanelStyles.subImageContainer }>
+      <div className={ DevBlogPanelStyles.subImageContainer } onClick={ this.handleClick }>
         <img src={ "../content/images/" + this.state.img } className={ DevBlogPanelStyles.subHeroImage } />
       </div>
     )

@@ -8,6 +8,7 @@ const BlogListItem = require('./blog-list-item');
 
 // Add the article component require statements here...
 const TestArticle = require('../content/articles/test-article');
+const TestArticle2 = require('../content/articles/test-article-2');
 
 module.exports = React.createClass({
   
@@ -18,14 +19,32 @@ module.exports = React.createClass({
       <VisibilityToggle id="BlogList" defaultVisibility={ false } className={ BlogListStyles.container }>
         <AnimationContainer id="BlogListAnimation" className={ BlogListStyles.list }>
 
-          <BlogListItem id="TestArticle1" title="Dev Blog Coming soon" subtext="Watch this space" hero='1' img="GoE-logo.png" component={ TestArticle }>
+          <BlogListItem id="TestArticle1" 
+                        title="Dev Blog Coming soon" 
+                        subtext="Watch this space" 
+                        hero='1' 
+                        img="GoE-logo.png"
+                        url="dev-blog-coming-soon"
+                        component={ TestArticle }>
             <TestArticle />
           </BlogListItem>
 
-          <BlogListItem id="TestArticle2" title="The Second Test" subtext="More subtext" hero='2' img="GoE-background.jpg" component={ TestArticle }>
+          <BlogListItem id="TestArticle2" 
+                        title="The Second Test" 
+                        subtext="More subtext" 
+                        hero='2' 
+                        img="GoE-background.jpg"
+                        url="hero-item-2"
+                        component={ TestArticle2 }>
           </BlogListItem>
 
-          <BlogListItem id="TestArticle3" title="The Third Test" subtext="Yet more subtext" hero='3' img="building-voodoo-hut.jpg" component={ TestArticle }>
+          <BlogListItem id="TestArticle3" 
+                        title="The Third Test" 
+                        subtext="Yet more subtext" 
+                        hero='3' 
+                        img="building-voodoo-hut.jpg"
+                        url="hero-item-3"
+                        component={ TestArticle2 }>
           </BlogListItem>
 
           <BlogListItem id="TestArticle4" title="The Forth Test" subtext="We can fit a reasonable amount of text in here." img="building-voodoo-hut.jpg" component={ TestArticle }>
