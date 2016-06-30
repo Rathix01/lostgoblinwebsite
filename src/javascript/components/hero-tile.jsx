@@ -14,7 +14,7 @@ module.exports = React.createClass({
   },
 
   handleClick() {
-    console.log(this.props.id)
+    this.publishToAction( "HeroItemSelect", this.state )
   },
 
   render() {
