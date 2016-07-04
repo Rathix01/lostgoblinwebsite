@@ -35,6 +35,17 @@ const styles = StyleSheet.create({
 		maxWidth: "1200px",
 		fontFamily: '"Roboto"',
 		fontSize: "18px",
+		padding: "5px 0px",
+	},
+	textImage: {
+		display: "block",
+		width: "auto",
+		maxWidth: "1200px",
+		height: "auto",
+		margin: "auto",
+		padding: "20px 0px",
+		background: "#3F3432",
+		position: "relative"
 	},
 	header: {
 		width: "100%",
@@ -44,6 +55,16 @@ const styles = StyleSheet.create({
 		maxWidth: "1200px",
 		fontFamily: '"Architects Daughter"',
 		fontSize: "26px",
+	},
+	subHeader: {
+		width: "100%",
+		color: "#F68F21",
+		height: "60px",
+		margin: "0px auto",
+		maxWidth: "1200px",
+		fontFamily: '"Architects Daughter"',
+		fontSize: "22px",
+		marginTop: "40px"
 	},
 	games: {
 		margin: "0px auto",
@@ -69,7 +90,9 @@ module.exports = {
 	pageContainer: css( styles.pageContainer ),
 	container: css( styles.container ),
 	textContainer: css( styles.textContainer ),
+	textImage: css( styles.textImage ),
 	header: css( styles.header ),
+	subHeader: css( styles.subHeader ),
 	games: css( styles.games ),
 	image: css( styles.image ),
 	backToList: css( styles.backToList ),
