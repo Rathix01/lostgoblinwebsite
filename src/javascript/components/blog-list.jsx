@@ -24,6 +24,8 @@ const Article_1_9_14 = require('../content/articles/article_1_9_14');
 const Article_24_1_15 = require('../content/articles/article_24_1_15');
 const Article_22_4_15 = require('../content/articles/article_22_4_15');
 const Article_14_10_14 = require('../content/articles/article_14_10_14');
+const Article_5_7_16 = require('../content/articles/article_5_7_16');
+
 
 
 module.exports = React.createClass({
@@ -35,10 +37,19 @@ module.exports = React.createClass({
       <VisibilityToggle id="BlogList" defaultVisibility={ false } className={ BlogListStyles.container }>
         <AnimationContainer id="BlogListAnimation" className={ BlogListStyles.list }>
           
+          <BlogListItem id="Article_5_7_16"
+                        title="And we’re back!"
+                        subtext="Part two of developing the art in Goblins of Elderstone"
+                        hero='1'
+                        img="article_5_7_16/GOE_Gobo01.png"
+                        url="art_process_2"
+                        component= {Article_5_7_16}>
+          </BlogListItem>
+
           <BlogListItem id="Article_19_2_16"
                         title="Art Process"
                         subtext="Part one of developing the art in Goblins of Elderstone"
-                        hero='1'
+                        hero='2'
                         img="article_19_2_16/art-board.png"
                         url="art_process_1"
                         component= {Article_19_2_16}>
@@ -47,7 +58,7 @@ module.exports = React.createClass({
           <BlogListItem id="Article_8_1_16"
                         title="A Fork in the Road"
                         subtext="Creating pathways in Goblins of Elderstone"
-                        hero='2'
+                        hero='3'
                         img="image00.png"
                         url="fork_in_the_road"
                         component= {Article_8_1_16}>
@@ -64,7 +75,6 @@ module.exports = React.createClass({
           <BlogListItem id="Article_27_11_15"
                         title="Goblins are Here"
                         subtext="Announcing our new game"
-                        hero='3'
                         img="GoE_Logo.png"
                         url="goblins_are_here"
                         component= {Article_27_11_15}>
