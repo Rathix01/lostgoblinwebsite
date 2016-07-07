@@ -11,7 +11,7 @@ module.exports = React.createClass({
         <div className={ ArticleStyles.container }>
           <h1 className={ ArticleStyles.header }>our first demo!</h1>
           <p className={ ArticleStyles.textContainer }>
-            our first gameplay video is up on our new youtube channel!!! go check it out our <a href="http://youtu.be/7r4QtJdZPcM">gameplay video</a>
+            our first gameplay video is up on our new youtube channel!!! go check it out our <a className={ ArticleStyles.link } href="http://youtu.be/7r4QtJdZPcM">gameplay video</a>
             <br/>See you again soon :)
           </p>
           <p className={ ArticleStyles.textContainer}>

@@ -39,8 +39,7 @@ const styles = StyleSheet.create({
 	},
 	textImage: {
 		display: "block",
-		width: "auto",
-		maxWidth: "1200px",
+		maxWidth: "100%",
 		height: "auto",
 		margin: "auto",
 		padding: "20px 0px",
@@ -66,6 +65,13 @@ const styles = StyleSheet.create({
 		fontSize: "22px",
 		marginTop: "40px"
 	},
+	link: {
+		color: "#F68F21",
+
+		':visited': {
+			color: "#F68F21"
+		}
+	},
 	games: {
 		margin: "0px auto",
 		maxWidth: "1200px",
@@ -83,6 +89,11 @@ const styles = StyleSheet.create({
 		margin: "-130px auto 0px",
 		position:"relative",
 		zIndex: "2",
+	},
+	imageContainer: {
+		margin: "0px auto",
+		maxWidth: "100%",
+		width: "1200px"
 	}
 })
 
@@ -93,7 +104,9 @@ module.exports = {
 	textImage: css( styles.textImage ),
 	header: css( styles.header ),
 	subHeader: css( styles.subHeader ),
+	link: css( styles.link ),
 	games: css( styles.games ),
 	image: css( styles.image ),
 	backToList: css( styles.backToList ),
+	imageContainer: css( styles.imageContainer )
 }

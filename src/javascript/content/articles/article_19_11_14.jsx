@@ -15,8 +15,12 @@ module.exports = React.createClass({
             <br/>Oh well, happy to at this stage that we can be sending out builds and hopefully everyone will give us useful feedback.
             <br/>Here is a new screenshot and the latest Title screen:
           </p>
-          <img className={ ArticleStyles.textImage } src="./content/images/MonsterMaze-2014-10-14-22-45-32-94.png"/>
-          <img className={ ArticleStyles.textImage } src="./content/images/Titlescreen.png"/>
+          <div className={ ArticleStyles.imageContainer }>
+            <img className={ ArticleStyles.textImage } src="./content/images/MonsterMaze-2014-10-14-22-45-32-94.png"/>
+          </div>
+          <div className={ ArticleStyles.imageContainer }>
+            <img className={ ArticleStyles.textImage } src="./content/images/Titlescreen.png"/>
+          </div>
           <p className={ ArticleStyles.textContainer }>
             enjoy, remember to follow @lostgoblin
           </p>

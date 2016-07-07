@@ -14,7 +14,7 @@ module.exports = React.createClass({
             Hey everyone
             <br/>We got a really nice write up on the forums on Smallworlds
             <br/>check it out
-            <br/><a href="http://www.smallworlds.com/forum/threads/1293982-Play-MonsterMaze-Defence-of-the-Cookies!">Play-MonsterMaze</a>
+            <br/><a className={ ArticleStyles.link } href="http://www.smallworlds.com/forum/threads/1293982-Play-MonsterMaze-Defence-of-the-Cookies!">Play-MonsterMaze</a>
           </p>
           <p className={ ArticleStyles.textContainer}>
             <br/>Author: ArtGoblin, Date: 3rd Aug 2015

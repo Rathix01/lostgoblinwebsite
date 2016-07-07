@@ -11,7 +11,7 @@ module.exports = React.createClass({
         <div className={ ArticleStyles.container }>
           <h1 className={ ArticleStyles.header }>Has it really been 3 months??</h1>
           <p className={ ArticleStyles.textContainer }>
-            Wow so it is almost the end of April and a lot has happened since we last posted an update, we launched our first game <a href="http://www.lostgoblin.com/games/monstermaze/">MonsterMaze</a> thank you everyone that downloaded and played it, we even got a 8/10 review <a href="http://gameslikefinder.com/monstermaze-defense-of-the-cookies/">GamesLikeFinder Review</a>.
+            Wow so it is almost the end of April and a lot has happened since we last posted an update, we launched our first game <a className={ ArticleStyles.link } href="http://www.lostgoblin.com/games/monstermaze/">MonsterMaze</a> thank you everyone that downloaded and played it, we even got a 8/10 review <a className={ ArticleStyles.link } href="http://gameslikefinder.com/monstermaze-defense-of-the-cookies/">GamesLikeFinder Review</a>.
           </p>
           <p className={ ArticleStyles.textContainer }>
             I quit my day job to become our first full time team member, decided that with no current ties I could code from anywhere in the world with my laptops so have moved to Texas for a couple of months as my first digital nomad destination.  I will do a separate travel update so stay tuned for that.

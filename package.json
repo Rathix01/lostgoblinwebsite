@@ -57,6 +57,7 @@
     "flux": "^2.0.1",
     "griddle-react": "^0.2.13",
     "gsap": "^1.16.1",
+    "html5-history": "^0.1.5",
     "immutable": "^3.4.1",
     "jeet": "^6.1.2",
     "moment": "^2.10.2",
